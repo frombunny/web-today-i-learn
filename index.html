@@ -1,126 +1,205 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-
-    <!-- TODO: Open Graph 메타 태그를 설정하세요 -->
-    <!-- <meta property="og:title" content="페이지 제목" /> -->
-    <!-- <meta property="og:description" content="페이지 설명" /> -->
-    <!-- <meta property="og:image" content="./images/thumbnail.jpg" /> -->
-
-    <title>Today I Learn</title>
+    <meta property="og:title" content="Bunny Archive" />
+    <meta
+      property="og:description"
+      content="자기소개 아카이브"
+    />
+    <meta property="og:image" content="./images/profile-portrait.svg" />
+    <title>Bunny Archive</title>
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/index.js" defer></script>
   </head>
   <body>
-    <!-- 상단 내비게이션 -->
-    <nav class="top-nav">
-      <span class="nav-logo">My Page</span>
-      <ul class="nav-links">
-        <li><a href="#about">자기소개</a></li>
-        <li><a href="#gallery">갤러리</a></li>
-        <li><a href="#works">인생 작품</a></li>
-        <li><a href="#til">TIL</a></li>
-      </ul>
-    </nav>
+    <header class="page-header">
+      <nav class="top-nav" aria-label="섹션 내비게이션">
+        <a class="nav-logo" href="#top">Bunny Archive</a>
+        <ul class="nav-links">
+          <li><a href="#profile">프로필</a></li>
+          <li><a href="#intro">자기소개</a></li>
+          <li><a href="#gallery">갤러리</a></li>
+          <li><a href="#works">인생 작품</a></li>
+          <li><a href="#til">TIL</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- 프로필 히어로 -->
-    <section class="hero" id="about">
-      <div class="profile-card">
-        <div class="profile-image">
-          <!-- TODO: 프로필 이미지를 넣어주세요 -->
-          <!-- <img src="./images/profile.jpg" alt="프로필 사진" /> -->
+    <main id="top">
+      <section class="hero" id="profile">
+        <div class="profile-card">
+          <div class="profile-image">
+            <img src="./images/profile-portrait.JPG" alt="미소 짓고 있는 임혜정의 프로필 일러스트" />
+          </div>
+          <div class="profile-info">
+            <p class="eyebrow">8th Backend</p>
+            <h1>바니</h1>
+            <p class="tagline">
+              깡과 총만 있으면 어디든 갈 수 있어
+            </p>
+            <a class="profile-link" href="https://github.com/frombunny" target="_blank" rel="noreferrer">
+              github.com/frombunny
+            </a>
+            <div class="profile-meta">
+              <span>#토끼처돌이🐰</span>
+              <span>#먹기위해사는사람</span>
+            </div>
+          </div>
         </div>
-        <div class="profile-info">
-          <h1>닉네임</h1>
-          <p class="tagline">한 줄 소개를 작성해주세요.</p>
-        </div>
-      </div>
-    </section>
-
-    <main>
-      <!-- 자기소개 -->
-      <section class="content-section">
-        <h2>자기소개</h2>
-        <p>자기소개를 작성해주세요.</p>
-        <!-- TODO: 소개 글 안에 블로그, GitHub 등 관련 링크를 <a> 태그로 연결하세요 -->
       </section>
 
-      <!-- 기본 정보 -->
-      <section class="content-section" id="info">
-        <h2>기본 정보</h2>
-        <!-- TODO: 자신의 기본 정보를 표(<table>)로 정리하세요 -->
-        <table class="info-table">
-          <tr>
-            <th>이름</th>
-            <td></td>
-          </tr>
-          <tr>
-            <th>MBTI</th>
-            <td></td>
-          </tr>
-          <tr>
-            <th>취미</th>
-            <td></td>
-          </tr>
-          <tr>
-            <th>좋아하는 음식</th>
-            <td></td>
-          </tr>
-        </table>
+      <section class="content-section intro-section" id="intro">
+        <article class="intro-copy">
+          <h2>자기소개</h2>
+          <p>
+            토끼를 좋아해서 바니입니다. 익힌 당근은 잘 안 먹습니다. <br>
+            못생긴 토끼 캐릭터는 싫어합니다. 그렇지만 대부분의 토끼는 에뻐요. <br>
+          </p>
+        </article>
+
+        <article class="info-panel" id="info">
+          <h2>기본 정보</h2>
+          <table class="info-table">
+            <caption class="sr-only">
+              임혜정의 기본 정보
+            </caption>
+            <tbody>
+              <tr>
+                <th scope="row">이름</th>
+                <td>임혜정</td>
+              </tr>
+              <tr>
+                <th scope="row">MBTI</th>
+                <td>ISFJ? ISFP?</td>
+              </tr>
+              <tr>
+                <th scope="row">취미</th>
+                <td>네이버 지도 보면서 맛집 발견하기</td>
+              </tr>
+              <tr>
+                <th scope="row">좋아하는 음식</th>
+                <td>김밥, 훠궈, 말차, 면류(라멘, 우동, 파스타 등)</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
       </section>
 
-      <!-- 나만의 갤러리 -->
       <section class="content-section" id="gallery">
         <h2>나만의 갤러리</h2>
-        <p class="section-desc">갤러리 부제를 작성해주세요. (예: 기억에 남는 여행지)</p>
         <div class="gallery-grid">
-          <!-- TODO: 9장의 이미지를 배치하세요 -->
-          <!--
-          <img src="./images/gallery-1.jpg" alt="갤러리 이미지 1" />
-          <img src="./images/gallery-2.jpg" alt="갤러리 이미지 2" />
-          ...
-          -->
+          <figure class="gallery-card">
+            <img src="./images/gallery-01.jpg" alt="진짜 레전드로 힘든 날 먹는 힐링 푸드" />
+            <figcaption>진짜 레전드로 힘든 날 먹는 힐링 푸드</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./images/gallery-02.jpg" alt="강아지에 둘러 쌓인 나" />
+            <figcaption>강아지에 둘러 쌓인 나</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./images/gallery-03.jpg" alt="오징어순대와 방어는 최고입니다" />
+            <figcaption>오징어순대와 방어는 최고입니다</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./images/gallery-04.png" alt="서울 맛집은 내 손 안에" />
+            <figcaption>서울 맛집은 내 손 안에</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./images/gallery-05.jpg" alt="김밥을 정말 좋아합니다" />
+            <figcaption>김밥을 정말 좋아합니다(집 김밥 기준 세 줄 가능)</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./images/gallery-06.jpg" alt="두바이 쫀득 김밥" />
+            <figcaption>두바이 쫀득 김밥</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./images/gallery-07.jpg" alt="어렸을 땐 조금 사내아이 같이 생겼습니다" />
+            <figcaption>어렸을 땐 조금 사내아이 같이 생겼습니다</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./images/gallery-08.jpg" alt="아웃백 알바 2년 했습니다" />
+            <figcaption>아웃백 알바 2년 했습니다</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./images/gallery-09.png" alt="눈토끼" />
+            <figcaption>눈토끼</figcaption>
+          </figure>
         </div>
       </section>
 
-      <!-- 나를 울린 인생 작품 -->
       <section class="content-section" id="works">
         <h2>나를 울린 인생 작품</h2>
-        <div class="works-list">
-          <!-- TODO: 최소 2가지 작품을 소개하세요 -->
-          <!-- TODO: 작품 중 하나는 <video> 또는 <iframe>으로 영상을 삽입하세요 -->
-          <article class="work-card">
+        <p class="section-desc">감정과 태도를 오래 붙들어 준 작품들</p>
+        <ol class="works-list">
+          <li class="work-card">
             <div class="work-thumbnail">
-              <!-- 작품 이미지 -->
+              <img src="./images/work-ani.jpg" alt="진격의 거인을 상징하는 거대한 벽과 긴장감 있는 분위기의 이미지" />
             </div>
             <div class="work-info">
-              <h3>작품 제목</h3>
-              <p>작품에 대한 설명을 작성해주세요.</p>
+              <h3>애니메이션 〈진격의 거인〉</h3>
+              <p>
+                거대한 세계관과 극단적인 선택들 속에서 인간이 끝까지 무엇을 지키려 하는지를
+                집요하게 보여주는 작품입니다. 인물마다 신념이 부딪히는 방식이 강하게 남아서,
+                보고 난 뒤에도 오래 생각하게 만드는 작품으로 기억하고 있습니다.
+              </p>
+              <iframe
+                src="https://www.youtube.com/embed/PuE1uRbpkTk?autoplay=1&mute=1&playsinline=1"
+                title="진격의 거인 더 라스트 어택 공식 예고편"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
-          </article>
-        </div>
+          </li>
+          <li class="work-card">
+            <div class="work-thumbnail">
+              <img src="./images/work-drama.jpg" alt="드라마 모범 택시를 표현한 이미지" />
+            </div>
+            <div class="work-info">
+              <h3>드라마 〈모범 택시〉</h3>
+              <p>
+                전개가 빠르고 통쾌해서 몰입감 있게 보게 되는 드라마입니다.
+                사건을 해결해 나가는 방식이 시원하고 캐릭터들의 팀플레이가 좋아서 인생 드라마로 넣었습니다.
+              </p>
+              <iframe
+                src="https://www.youtube.com/embed/g2HHQtxZr4M"
+                title="드라마 모범 택시 관련 유튜브 영상"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </li>
+        </ol>
       </section>
 
-      <!-- TIL (Today I Learned) -->
       <section class="content-section" id="til">
-        <h2>TIL</h2>
-        <p class="section-desc">오늘 새롭게 배운 것들을 기록합니다.</p>
+        <div class="til-heading">
+          <div>
+            <h2>TIL</h2>
+            <p class="section-desc">오늘 새롭게 배운 것을 날짜와 함께 쌓아두는 공간</p>
+          </div>
+        </div>
 
-        <!-- TIL 작성 폼 -->
         <form class="til-form" id="til-form">
           <div class="form-group">
             <label for="til-date">날짜</label>
             <input type="date" id="til-date" name="date" required />
           </div>
           <div class="form-group">
-            <label for="til-title">제목</label>
-            <input type="text" id="til-title" name="title" placeholder="학습 주제를 입력하세요" required />
+            <label for="til-title">학습 주제</label>
+            <input type="text" id="til-title" name="title" placeholder="예: CSS Grid" required />
           </div>
           <div class="form-group">
-            <label for="til-content">내용</label>
-            <textarea id="til-content" name="content" placeholder="오늘 배운 내용을 정리해주세요" required></textarea>
+            <label for="til-content">학습 내용</label>
+            <textarea
+              id="til-content"
+              name="content"
+              placeholder="오늘 이해한 개념, 느낀 점, 다시 찾아볼 키워드를 적어주세요"
+              required
+            ></textarea>
           </div>
           <div class="form-actions">
             <button type="submit">등록</button>
@@ -128,21 +207,21 @@
           </div>
         </form>
 
-        <!-- TIL 목록: 폼으로 등록하면 여기에 항목이 추가됩니다 -->
         <div class="til-list" id="til-list">
-          <!-- 아래는 예시 항목입니다. 자유롭게 수정하거나 삭제하세요 -->
           <article class="til-item">
-            <time>2026-03-15</time>
-            <h3>HTML 시멘틱 태그</h3>
-            <p>header, nav, main, section, article, footer 등 시멘틱 태그의 역할과 사용법을 배웠다.</p>
+            <time datetime="2026-03-18">2026-03-18</time>
+            <h3>폼 입력값을 DOM으로 추가하기</h3>
+            <p>
+              `submit` 이벤트에서 `preventDefault()`를 호출하고, 새 요소를 만들어 목록 앞쪽에 넣는
+              방식으로 즉시 반영되는 기록 UI를 구현했다.
+            </p>
           </article>
         </div>
       </section>
-
     </main>
 
     <footer>
-      <p>&copy; My Page</p>
+      <p>Made for Today I Learned, by Lim Hyejeong.</p>
     </footer>
   </body>
 </html>
