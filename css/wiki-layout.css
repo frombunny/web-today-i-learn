@@ -315,7 +315,7 @@ main {
 
 .work-card {
   display: grid;
-  grid-template-columns: 170px 1fr;
+  grid-template-columns: 220px 1fr;
   gap: 22px;
   padding: 24px;
   border: 1px solid var(--divider-color);
@@ -334,7 +334,7 @@ main {
 .work-thumbnail img {
   display: block;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
@@ -345,8 +345,9 @@ main {
 
 .work-card iframe,
 .work-card video {
+  grid-column: 1 / -1;
   width: 100%;
-  margin-top: 16px;
+  margin-top: 4px;
   aspect-ratio: 16 / 9;
   border: none;
   border-radius: 16px;
